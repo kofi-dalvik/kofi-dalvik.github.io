@@ -1,0 +1,16 @@
+{
+    "name": "Currency COnverter Progressive Web App",
+    "short_name": "CC-App",
+    "description": "Progressive Web App that  converts between two currencies.",
+    "icons": [
+        {
+            "src": "dist/logo.png",
+            "sizes": "285x322",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/index.html",
+    "display": "fullscreen",
+    "theme_color": "#34495E",
+    "background_color": "#34495E"
+}

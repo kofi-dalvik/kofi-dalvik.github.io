@@ -1,14 +1,17 @@
 'use strict';
 
 //cache version name
-var currentCache = 'currency-converter-v2';
+var currentCache = 'currency-converter-v1';
 
 /**
  * on installation, cache the asset files
  */
 self.addEventListener('install', function (installation) {
     installation.waitUntil(caches.open(currentCache).then(function (cache) {
-        return cache.addAll(['/', '/dist/bundle.js', '/dist/style.css', '/dist/logo.png']);
+        return cache.addAll(['/', '/dist/bundle.js', '/dist/style.css', '/dist/logo.png']).then(function () {
+            //skip waiting
+            return self.skipWaiting();
+        });
     }));
 });
 
@@ -22,6 +25,9 @@ self.addEventListener('activate', function (event) {
                 caches.delete(name);
             }
         });
+    }).then(function () {
+        //set worker as active for all clients
+        self.clients.claim();
     }));
 });
 
