@@ -1,0 +1,30 @@
+{
+  "name": "kofi-dalvik.github.io",
+  "version": "1.0.0",
+  "description": "A personal portfolio site",
+  "main": "index.html",
+  "scripts": {
+    "watch": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kofi-dalvik/kofi-dalvik.github.io.git"
+  },
+  "keywords": [
+    "personal",
+    "portfolio",
+    "software",
+    "engineer",
+    "researcher",
+    "phd"
+  ],
+  "author": "Dawuda Ahmed Adei Kofi",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/kofi-dalvik/kofi-dalvik.github.io/issues"
+  },
+  "homepage": "https://github.com/kofi-dalvik/kofi-dalvik.github.io#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.1.8"
+  }
+}
